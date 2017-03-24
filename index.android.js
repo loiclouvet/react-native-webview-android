@@ -94,6 +94,14 @@ class WebViewAndroid extends Component {
     );
   }
 
+  stopLoading() {
+    UIManager.dispatchViewManagerCommand(
+      this._getWebViewHandle(),
+      UIManager.RNWebViewAndroid.Commands.stopLoading,
+      null
+    );
+  }
+
   render() {
 
     let otherView = null;
